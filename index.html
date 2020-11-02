@@ -27,12 +27,8 @@
     <div class="arjs-loader">
         <div>Loading, please wait...</div>
     </div>
-    <a-scene
-        vr-mode-ui="enabled: false;"
-        renderer="logarithmicDepthBuffer: true;"
-        embedded
-        arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: true;"
-    >
+<a-scene vr-mode-ui="enabled: false;" renderer="logarithmicDepthBuffer: true;" embedded
+    arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;">
         <!-- we use cors proxy to avoid cross-origin problems -->
         <a-nft
             type="nft"
@@ -43,9 +39,7 @@
             smoothThreshold="5"
         >
             <a-entity
-                geometry="primitive: box"
-                material="color: red"
-                light="type: point; intensity: 2.0"
+                gltf-model="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/scene.gltf"
                 scale="5 5 5"
                 position="50 150 0"
             >
